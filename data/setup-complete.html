@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Wi-Fi Setup</title>
+        <link rel="stylesheet" href="/styles.css">
+        <script>
+            // Switch from AP to STA mode after 1 second
+            setTimeout(function() 
+            {
+                fetch('/switchWiFiMode')
+                    .then(response => response.text())
+                    .then(result => console.log('Switching to STA mode:', result));
+            }, 1000); // Wait 1 second before triggering Wi-Fi mode switch
+            
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Wi-Fi Setup</h1>
+            <p>Wi-Fi settings have been saved successfully.</p>
+            <p>Connecting to your network...</p>
+            <div class="spinner"></div>
+        </div>
+    </body>
+
+    </script>
+
+</html>

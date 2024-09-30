@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Light Control</title>
+    <script src="/colorjoe/colorjoe.min.js"></script>
+    <link rel="stylesheet" href="/colorjoe/colorjoe.css"> 
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main class='form-signin'>
+
+        <h1>RGB Light Control</h1>
+
+        <div class="slider-container">
+            <label class="slider-label" for="rSlider">Red:</label>
+            <input type="range" id="rSlider" min="0" max="255" value="0">
+            <span id="rValue">0</span>
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label" for="gSlider">Green:</label>
+            <input type="range" id="gSlider" min="0" max="255" value="0">
+            <span id="gValue">0</span>
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label" for="bSlider">Blue:</label>
+            <input type="range" id="bSlider" min="0" max="255" value="0">
+            <span id="bValue">0</span>
+        </div>
+
+        <div id="colorPreview">RGB(0, 0, 0)</div>
+
+        <label for="colorPicker">Pick a Color:</label>
+
+        <div id="colorPaletteContainer">
+            <div id="colorGrid"></div>
+        </div>
+
+        <div class="colorPickerContainer">
+            <div class="colorjoe"></div>
+        </div>
+
+        <script src="/rgbSelector.js"></script>
+
+    </main>
+</body>
+</html>

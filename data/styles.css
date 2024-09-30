@@ -1,0 +1,289 @@
+*,::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the element's total height/width */
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    width: 100%;
+}
+
+span {
+    width: 40px;
+    display: inline-block;
+    text-align: right;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/*=============  setup-index.html style =============*/
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    border: 1px solid #ced4da;
+    border-radius: .3rem;
+    padding: .375rem .75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.btn_icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/*================  setup-complete.html style ================*/
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*================  index.html style ================*/
+
+/* Styles for the sliders */
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.slider-label {
+    font-size: 1.2rem;
+    width: 80px; /* Adjust this width based on your design */
+    text-align: left;
+    vertical-align: center;
+    margin-right: 10px;
+}
+
+#rSlider, #gSlider, #bSlider {
+    appearance: none; /* Resets the default appearance */
+    width: 100%;
+    height: 10px;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Custom gradient backgrounds */
+#rSlider {
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 0, 0) 100%);
+}
+
+#gSlider {
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(0, 255, 0) 100%);
+}
+
+#bSlider {
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(0, 0, 255) 100%);
+}
+
+/* Custom Thumb Styling */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #888;
+    cursor: pointer;
+    margin-top: -6px; /* Centers the thumb */
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #888;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #888;
+    cursor: pointer;
+}
+
+/* Custom Track Styling */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    border-radius: .5rem;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    border-radius: .5rem;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 10px;
+    border-radius: .5rem;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower, input[type="range"]::-ms-fill-upper {
+    background: none;
+}
+
+/* Styles for the color previewer */
+
+#colorPreview {
+    width: 100%;
+    height: 100px;
+    border: 2px solid #888;
+    border-radius: .5rem;
+    margin: 20px 0; /* Space above and below the preview */
+    text-align: center;
+    line-height: 100px; /* Center text vertically */
+    font-size: 1.2rem;
+    color: #fff; /* Text color for visibility */
+    font-weight: bold;
+}
+
+/* Styles for the color palette */
+
+#colorPaletteContainer {
+    display: flex; /* Use flexbox to center */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically, if needed */
+    margin: 20px;
+    background-color: white;
+}
+
+#colorGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-template-rows: repeat(8, 1fr); /* 8 rows for equal height */
+    gap: 5px;
+    padding: 15px;
+    border: 2px solid #888;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.color-swatch {
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+
+.color-swatch:hover {
+    border: 2px solid #000;
+}
+
+/* Styles for the color picker */
+
+.colorPicker{
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.colorPicker.oned {
+    margin-right: 0;
+}
+
+.colorPickerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

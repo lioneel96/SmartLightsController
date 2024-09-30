@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Wi-Fi Setup</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head> 
+    <body>
+        <main class='form-signin'>
+            <form action='/' method='post'>
+                <h1 class=''>Wi-Fi Setup</h1>
+
+                <div class='form-floating'>
+                    <label for="ssid"><img src="/icons/icon-wifi.png" alt="Wi-Fi"  class="icon"> SSID</label>
+                    <input type='text' class='form-control' id="ssid" name='ssid' maxlength='30' required>
+                </div>
+                <br/>
+                <div class='form-floating'>
+                    <label for="password"><img src="/icons/icon-password.png" alt="Lock"  class="icon"> Password</label>
+                    <input type='password' class='form-control' id="password" name='password' maxlength='30' required>
+                </div>
+                
+                <br/><br/>
+                <button type='submit'><img src="/icons/icon-save.png" alt="Save" class="btn_icon"> Save</button>
+            </form>
+        </main>
+    </body>
+</html>
